@@ -5,10 +5,15 @@ on:
             name:
                 required: true
                 type: string
+        secrets:
+            my_token:
+                required: true
 
 jobs:
     say-hello:
         runs-on: ubuntu-latest
         steps:
             - name: Welcome
-              run: echo "Hello, ${{ inputs.name }} Welcome from reusable workflows!"
+              run: |
+                echo "Hello, ${{ inputs.name }} Welcome from reusable workflows!"
+                ehco "The secret is ${{ secrets.my_token }}"
