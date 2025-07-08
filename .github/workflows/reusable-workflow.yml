@@ -16,4 +16,4 @@ jobs:
             - name: Welcome
               run: |
                 echo "Hello, ${{ inputs.name }} Welcome from reusable workflows!"
-                ehco "The secret is ${{ secrets.my_token }} "
+                echo "The secret is ${{ secrets.my_token }} "
