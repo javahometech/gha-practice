@@ -6,6 +6,9 @@ on:
                 type: string
                 default: Hari
                 description: Enter name
+            skip_tests:
+                type: boolean
+                description: Skip test cases?
 jobs:
     call-workflow:
         uses: ./.github/workflows/reusable-workflow.yml
