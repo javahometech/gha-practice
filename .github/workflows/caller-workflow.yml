@@ -12,6 +12,7 @@ on:
 jobs:
     print-boolean:
         runs-on: ubuntu-latest
+        if: inputs.skip_tests
         steps:
             - name: Print Boolean Value
               run: echo "${{ inputs.skip_tests }}"
