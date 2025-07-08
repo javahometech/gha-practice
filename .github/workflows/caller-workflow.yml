@@ -10,6 +10,11 @@ on:
                 type: boolean
                 description: Skip test cases?
 jobs:
+    print-boolean:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Print Boolean Value
+              run: echo "${{ inputs.skip_tests }}"
     call-workflow:
         uses: ./.github/workflows/reusable-workflow.yml
         with:
