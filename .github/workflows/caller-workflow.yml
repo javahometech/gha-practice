@@ -1,9 +1,15 @@
 name: Caller Workflow
-on: push
+on:
+    workflow_dispatch:
+        inputs:
+            name:
+                type: string
+                default: Hari
+                description: Enter name
 jobs:
     call-workflow:
         uses: ./.github/workflows/reusable-workflow.yml
         with:
-            name: "Hari Kammana"
+            name: "${{ inputs.name }}"
         secrets:
             my_token: ${{ secrets.MY_TOKEN }}
